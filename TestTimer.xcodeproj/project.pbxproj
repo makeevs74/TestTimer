@@ -13,6 +13,7 @@
 		3648CFC128B2AF9800536E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3648CFBF28B2AF9800536E81 /* Main.storyboard */; };
 		3648CFC328B2AF9B00536E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3648CFC228B2AF9B00536E81 /* Assets.xcassets */; };
 		3648CFC628B2AF9B00536E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3648CFC428B2AF9B00536E81 /* LaunchScreen.storyboard */; };
+		3648CFCF28B2B6C000536E81 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3648CFCE28B2B6C000536E81 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3648CFCF28B2B6C000536E81 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,63 @@
 		3648CFB828B2AF9800536E81 /* TestTimer */ = {
 			isa = PBXGroup;
 			children = (
-				3648CFB928B2AF9800536E81 /* AppDelegate.swift */,
-				3648CFBB28B2AF9800536E81 /* SceneDelegate.swift */,
-				3648CFBD28B2AF9800536E81 /* ViewController.swift */,
-				3648CFBF28B2AF9800536E81 /* Main.storyboard */,
-				3648CFC228B2AF9B00536E81 /* Assets.xcassets */,
-				3648CFC428B2AF9B00536E81 /* LaunchScreen.storyboard */,
-				3648CFC728B2AF9B00536E81 /* Info.plist */,
+				3648CFD128B2B6E900536E81 /* Sources */,
+				3648CFD528B2B74400536E81 /* Resources */,
 			);
 			path = TestTimer;
+			sourceTree = "<group>";
+		};
+		3648CFD128B2B6E900536E81 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFD428B2B71F00536E81 /* StoryBoard */,
+				3648CFD328B2B70900536E81 /* View */,
+				3648CFD228B2B6F600536E81 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3648CFD228B2B6F600536E81 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFB928B2AF9800536E81 /* AppDelegate.swift */,
+				3648CFBB28B2AF9800536E81 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3648CFD328B2B70900536E81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFBD28B2AF9800536E81 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3648CFD428B2B71F00536E81 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFBF28B2AF9800536E81 /* Main.storyboard */,
+				3648CFC428B2AF9B00536E81 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		3648CFD528B2B74400536E81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFC228B2AF9B00536E81 /* Assets.xcassets */,
+				3648CFD628B2B76D00536E81 /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3648CFD628B2B76D00536E81 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3648CFC728B2AF9B00536E81 /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,9 @@
 			dependencies = (
 			);
 			name = TestTimer;
+			packageProductDependencies = (
+				3648CFCE28B2B6C000536E81 /* SnapKit */,
+			);
 			productName = TestTimer;
 			productReference = 3648CFB628B2AF9800536E81 /* TestTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 3648CFAD28B2AF9700536E81;
+			packageReferences = (
+				3648CFCD28B2B6C000536E81 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3648CFB728B2AF9800536E81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = US52Z2NGF6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTimer/Info.plist;
+				INFOPLIST_FILE = TestTimer/Resources/Configuration/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = US52Z2NGF6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTimer/Info.plist;
+				INFOPLIST_FILE = TestTimer/Resources/Configuration/info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3648CFCD28B2B6C000536E81 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3648CFCE28B2B6C000536E81 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3648CFCD28B2B6C000536E81 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3648CFAE28B2AF9700536E81 /* Project object */;
 }
